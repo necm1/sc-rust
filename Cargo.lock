@@ -67,6 +67,10 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "07e28edb80900c19c28f1072f2e8aeca7fa06b23cd4169cefe1af5aa3260783f"
 
 [[package]]
+name = "handler"
+version = "0.1.0"
+
+[[package]]
 name = "io-uring"
 version = "0.7.8"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -167,6 +171,10 @@ dependencies = [
 ]
 
 [[package]]
+name = "processor"
+version = "0.1.0"
+
+[[package]]
 name = "quote"
 version = "1.0.40"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -195,6 +203,8 @@ name = "sc-rust"
 version = "0.1.0"
 dependencies = [
  "buffer-reader",
+ "handler",
+ "processor",
  "tokio",
 ]
 

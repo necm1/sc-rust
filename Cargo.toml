@@ -1,5 +1,5 @@
 [workspace]
-members = ["crates/buffer-reader", "."]
+members = ["crates/buffer-reader", "crates/processor", "crates/handler", "."]
 
 [package]
 name = "sc-rust"
@@ -9,3 +9,5 @@ edition = "2024"
 [dependencies]
 tokio = { version = "1", features = ["full"] }
 buffer-reader = { path = "crates/buffer-reader" }
+processor = { path = "crates/processor" }
+handler = { path = "crates/handler" }
