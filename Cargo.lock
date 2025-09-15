@@ -18,6 +18,17 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "320119579fcad9c21884f5c4861d16174d0e06250625266f50fe6898340abefa"
 
 [[package]]
+name = "async-trait"
+version = "0.1.89"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "9035ad2d096bed7955a320ee7e2230574d28fd3c3a0f186cbea1ff3c7eed5dbb"
+dependencies = [
+ "proc-macro2",
+ "quote",
+ "syn",
+]
+
+[[package]]
 name = "autocfg"
 version = "1.5.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -173,6 +184,12 @@ dependencies = [
 [[package]]
 name = "processor"
 version = "0.1.0"
+dependencies = [
+ "async-trait",
+ "buffer-reader",
+ "shared",
+ "tokio",
+]
 
 [[package]]
 name = "quote"
@@ -203,6 +220,8 @@ name = "sc"
 version = "0.1.0"
 dependencies = [
  "buffer-reader",
+ "processor",
+ "shared",
  "tokio",
 ]
 
@@ -214,6 +233,7 @@ dependencies = [
  "handler",
  "processor",
  "sc",
+ "shared",
  "tokio",
 ]
 
@@ -222,6 +242,14 @@ name = "scopeguard"
 version = "1.2.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "94143f37725109f92c262ed2cf5e59bce7498c01bcc1502d7b9afe439a4e9f49"
+
+[[package]]
+name = "shared"
+version = "0.1.0"
+dependencies = [
+ "buffer-reader",
+ "tokio",
+]
 
 [[package]]
 name = "signal-hook-registry"

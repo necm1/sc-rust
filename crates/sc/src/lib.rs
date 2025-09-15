@@ -1,1 +1,1 @@
-pub mod sc_file;
+pub mod decoder;

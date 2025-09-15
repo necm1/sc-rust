@@ -1,8 +1,5 @@
-// use buffer_reader::BufferReader;
-// mod decoder;
-// mod processor;
-// mod sc_file;
-use sc::sc_file;
+use sc::decoder;
+use shared::sc_file::ScFile;
 use std::io::Result;
 
 #[tokio::main]
@@ -15,12 +12,12 @@ async fn main() -> Result<()> {
     // let sc_file_path = current_dir.join("assets/background_clan_capital.sc");
     // let sc_file_path = current_dir.join("assets/buildings.sc");
 
-    let mut sc_file = sc_file::ScFile::new(sc_file_path.to_string_lossy().into());
+    let mut sc_file = ScFile::new(sc_file_path.to_string_lossy().into());
     sc_file.load().await?;
 
-    // let decoder = decoder::Decoder::new();
+    let decoder = decoder::Decoder::new();
 
-    // decoder.decode(&sc_file.buffer).await?;
+    decoder.decode(&sc_file).await?;
 
     Ok(())
 }

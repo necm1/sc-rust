@@ -124,4 +124,14 @@ impl BufferReader {
         }
         Ok(())
     }
+
+    pub fn peek_bytes(&self, offset: usize, len: usize) -> Result<&[u8], std::io::Error> {
+        if offset + len > self.buffer.len() {
+            return Err(std::io::Error::new(
+                std::io::ErrorKind::UnexpectedEof,
+                "Not enough data to peek",
+            ));
+        }
+        Ok(&self.buffer[offset..offset + len])
+    }
 }

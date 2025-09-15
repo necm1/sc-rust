@@ -18,3 +18,4 @@ buffer-reader = { path = "crates/buffer-reader" }
 processor = { path = "crates/processor" }
 handler = { path = "crates/handler" }
 sc = { path = "crates/sc" }
+shared = { path = "crates/shared" }
