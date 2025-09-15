@@ -1,2 +1,24 @@
 /target
 /assets
+Cargo.lock
+
+# IDE
+# VSCode
+.vscode/
+*.code-workspace
+# JetBrains (IntelliJ, CLion, RustRover)
+.idea/
+*.iml
+# Sublime
+*.sublime-workspace
+*.sublime-project
+
+# Logs, Dumps, Backups
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+
+.DS_Store
+Thumbs.db
